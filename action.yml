@@ -1,13 +1,12 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'Kudos'
+description: 'Give kudos for approving a PR within time frame'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
-    required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+  seconds:
+    description: 'number of seconds to be within for kudos'
+    required: false
+    default: '300'
+  token:
+    description: 'token with access to your repository e.g. ${{ secrets.GITHUB_TOKEN }}'
 runs:
   using: 'node12'
   main: 'dist/index.js'
