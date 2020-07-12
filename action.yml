@@ -6,7 +6,7 @@ inputs:
     required: false
     default: '300'
   token:
-    description: 'token with access to your repository e.g. ${{ secrets.GITHUB_TOKEN }}'
+    description: 'token with access to your repository e.g. GITHUB_TOKEN'
 runs:
   using: 'node12'
   main: 'dist/index.js'
